@@ -14,7 +14,7 @@
 
   <div class="container">
     <main>
-      <form action="#" method="get" class="row mt-4" id="myForm" novalidate>
+      <form method="get" class="row mt-4 needs-validation" id="myForm" novalidate>
         <div class="col">
           <h1 class="mb-3">Registro</h1>
           <hr class="my-4">
@@ -61,7 +61,7 @@
 
             <div class="col-sm-12">
               <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
-                data-bs-target="#modalTerminos" id="btn-modal-terminos">Términos del servicio</button>
+                data-bs-target="#modalTerminos" id="btn-modal-terminos" >Términos del servicio</button>
                 <span class="invalid-feedback" id="feedback-modal-terminos">
                   Debes aceptar los terminos y condiciones.
                 </span>
@@ -99,7 +99,7 @@
         </div>
         <div class="modal-footer">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="terminos">
+            <input type="checkbox" class="form-check-input" id="terminos" required>
             <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
           </div>
         </div>

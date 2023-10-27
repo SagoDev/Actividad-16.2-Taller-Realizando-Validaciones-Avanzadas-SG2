@@ -15,15 +15,14 @@ function myValidations() {
 
     if (!terminos.checked) {
         validity = false;
-        document.getElementById("btn-modal-terminos").classList.add("invalid-color");
+        document.getElementById("btn-modal-terminos").classList.add('text-danger');
         document.getElementById("feedback-modal-terminos").style.display = "inline";
     } else {
-        document.getElementById("btn-modal-terminos").classList.remove("invalid-color");
+        document.getElementById("btn-modal-terminos").classList.remove('text-danger');
         document.getElementById("feedback-modal-terminos").style.display = "none";
     }
 
     return validity;
-
 }
 
 document.getElementById("myForm").addEventListener("submit", event => {
@@ -32,7 +31,9 @@ document.getElementById("myForm").addEventListener("submit", event => {
         event.stopPropagation();
     }
     document.body.classList.add('was-validated');
-    ['change', 'input'].forEach(ev => { document.body.addEventListener(ev, myValidations) })
+    ['change', 'input'].forEach(ev => { 
+        document.body.addEventListener(ev, myValidations)
+    });
 });
 
 
